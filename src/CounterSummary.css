@@ -1,0 +1,59 @@
+.count-and-clear
+{
+    background-color: white;
+    text-align: center;
+    margin: 2rem 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-and-clear h3 span
+{
+    margin-left: 0.5rem;
+    color: blue;
+    font-size: 22px;
+}
+
+.count-and-clear button
+{
+    color: white;
+    background-color: red;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.count-and-clear button:hover
+{
+    color: blue;
+    background-color: aliceblue;
+}
+
+.no-counters
+{
+    background-color: white;
+    text-align: center;
+    margin: 2rem 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.no-counters h3
+{
+    margin-left: 0.5rem;
+    font-size: 20px;
+    margin: 15px auto;
+}
+
+.no-counters p
+{
+    color: gray;
+    margin-bottom: 15px;
+}

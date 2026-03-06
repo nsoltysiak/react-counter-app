@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import AddCounter from "./AddCounter.jsx";
+import CounterSummary from "./CounterSummary.jsx";
 import "../CounterTiles.css";
 
 function CounterTiles() 
@@ -123,64 +125,22 @@ function CounterTiles()
 
   return (
     <>
-      <div className="addCounter">
-        {/* Idle Mode */}
-        {!isAddingCounter && (
-          <button onClick={() => setIsAddingCounter(true)}>
-            + Add New Counter
-          </button>
-        )}
+      <AddCounter
+        isAddingCounter={isAddingCounter}
+        setIsAddingCounter={setIsAddingCounter}
+        newTitle={newTitle}
+        setNewTitle={setNewTitle}
+        newStep={newStep}
+        setNewStep={setNewStep}
+        handleCreate={handleCreate}
+        handleCancel={handleCancel}
+      />
 
-        {/* Form Mode */}
-        {isAddingCounter && (
-          <div className="formCounterCancel">
-            <h4>Create New Counter</h4>
-            <label htmlFor="countername">Counter Name:</label>
-            <input
-              type="text"
-              id="countername"
-              name="countername"
-              placeholder="Counter Name"
-              value={newTitle}
-              onChange={(e) => setNewTitle(e.target.value)}
-            />
-
-            <label htmlFor="incrementamount">Increment Amount:</label>
-            <input
-              type="number"
-              id="incrementamount"
-              name="incrementamount"
-              min="1"
-              value={newStep}
-              onChange={(e) => setNewStep(e.target.value)}
-            />
-
-            <button onClick={handleCreate} className="createCounter">
-              Create Counter
-            </button>
-            <button onClick={handleCancel} className="cancelCounter">
-              Cancel
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Counters Exist*/}
-      {countersExist && (
-        <div className="count-and-clear">
-          <h3>
-            Total Count: <span>{totalCount}</span>
-          </h3>
-          <button onClick={clearAllCounters}>Clear All Counters</button>
-        </div>
-      )}
-
-      {!countersExist && (
-        <div className="no-counters">
-          <h3>No counters yet</h3>
-          <p>Create your first counter to start tracking!</p>
-        </div>
-      )}
+      <CounterSummary
+        countersExist={countersExist}
+        totalCount={totalCount}
+        clearAllCounters={clearAllCounters}
+      />
 
       <div className="counter-tiles">
         {counters.map((counter) => (
