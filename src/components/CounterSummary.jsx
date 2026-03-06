@@ -12,7 +12,7 @@ function CounterSummary( {countersExist, totalCount, clearAllCounters} )
           <h3>
             Total Count: <span>{totalCount}</span>
           </h3>
-          <button onClick={clearAllCounters}>Clear All Counters ok</button>
+          <button onClick={clearAllCounters}>Clear All Counters</button>
         </div>
       )}
 
