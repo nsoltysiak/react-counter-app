@@ -23,11 +23,13 @@
 .counter-tiles .counter-tile-title
 {
     margin: 15px auto 0;
+    font-size: 24px;
 }
 
 .counter-tiles h4
 {
     margin-top: 15px;
+    font-size: 22px;
 }
 .counter-tiles h4 span
 {
@@ -42,7 +44,7 @@
     width: 40%;
     border-radius: 5px;
     color: blue;
-    font-size: 14px;
+    font-size: 18px;
     padding: 3px 0;
     
     background-color: rgba(169, 233, 237, 0.5);
@@ -68,6 +70,7 @@
     width: 100%;
     cursor: pointer;
     transition: all 0.3s;
+    font-size: 20px;
 }
 
 .counter-tiles .counter-buttons button:hover
